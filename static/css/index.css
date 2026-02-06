@@ -597,6 +597,38 @@ code {
   flex-shrink: 0;
 }
 
+/* figure container */
+.figure-block {
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+/* half-width option */
+.figure-block.half-width {
+  width: 50%;
+}
+
+/* image: height-based normalization */
+.result-figure {
+  height: var(--figure-height);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* caption */
+.figure-caption {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-align: justify;
+}
+
+
 
 /* Mobile Responsive Improvements */
 @media screen and (max-width: 768px) {
@@ -653,6 +685,13 @@ code {
   
   .content.has-text-justified {
     font-size: 1rem;
+  }
+  :root {
+    --figure-height: 260px;
+  }
+
+  .figure-block.half-width {
+    width: 100%;
   }
 }
 
